@@ -12,7 +12,8 @@ services:
         volumes:
             - ./pact/pacts:/tmp/pacts
         environment:
-            - pact_urls=/tmp/pacts/another-they.json,/tmp/pacts/fail.json,/tmp/pacts/me-they.json
+            # - pact_urls=/tmp/pacts/another-they.json,/tmp/pacts/fail.json,/tmp/pacts/me-they.json ## Run all files
+            - pact_urls=/tmp/pacts/another-they.json
             - provider_base_url=http://api:4000
             - provider_states_url=http://api:4000/provider-states
             - provider_states_active_url=http://api:4000/provider-state
